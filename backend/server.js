@@ -9,12 +9,15 @@ app.use(express.json());
 
 const noteRoutes = require("./routes/notes");
 
-app.use("/notes", noteRoutes);
+// semua endpoint menjadi:
+// http://ip:3000/api/notes
+app.use("/api/notes", noteRoutes);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const HOST = "0.0.0.0";
 
-app.listen(PORT, () => {
-
-    console.log(`Server running : http://localhost:${PORT}`);
-
+app.listen(PORT, HOST, () => {
+    console.log(`Server running`);
+    console.log(`Local   : http://localhost:${PORT}`);
+    console.log(`Network : http://YOUR_IP:${PORT}`);
 });
