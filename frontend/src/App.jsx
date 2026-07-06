@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
 import Editor from "./pages/Editor";
+import LockScreen from "./pages/LockScreen";
+
+import ProtectedRoute from "./auth/ProtectedRoute";
 
 function App() {
 
@@ -12,18 +15,35 @@ function App() {
             <Routes>
 
                 <Route
+                    path="/lock"
+                    element={<LockScreen />}
+                />
+
+                <Route
                     path="/"
-                    element={<Dashboard />}
+                    element={
+                        <ProtectedRoute>
+                            <Dashboard />
+                        </ProtectedRoute>
+                    }
                 />
 
                 <Route
                     path="/new"
-                    element={<Editor />}
+                    element={
+                        <ProtectedRoute>
+                            <Editor />
+                        </ProtectedRoute>
+                    }
                 />
 
                 <Route
                     path="/edit/:id"
-                    element={<Editor />}
+                    element={
+                        <ProtectedRoute>
+                            <Editor />
+                        </ProtectedRoute>
+                    }
                 />
 
             </Routes>

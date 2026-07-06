@@ -1,0 +1,152 @@
+*{
+    box-sizing:border-box;
+}
+
+.lock-container{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#123A73,#1E5BB8);
+
+    padding:20px;
+
+}
+
+.lock-card{
+
+    width:100%;
+
+    max-width:480px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:50px 45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:22px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.18);
+
+}
+
+.lock-card h1{
+
+    font-size:42px;
+
+    color:#123A73;
+
+    margin:0;
+
+}
+
+.lock-card p{
+
+    font-size:18px;
+
+    color:#666;
+
+    text-align:center;
+
+}
+
+.lock-card input{
+
+    width:100%;
+
+    height:60px;
+
+    border:2px solid #d7d7d7;
+
+    border-radius:12px;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:28px;
+
+    letter-spacing:12px;
+
+    transition:.2s;
+
+}
+
+.lock-card input:focus{
+
+    border-color:#123A73;
+
+    box-shadow:0 0 10px rgba(18,58,115,.25);
+
+}
+
+.lock-card button{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#123A73;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.lock-card button:hover{
+
+    background:#0f2f5c;
+
+}
+
+.lock-card button:active{
+
+    transform:scale(.98);
+
+}
+
+.lock-error{
+
+    color:#d32f2f;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+.lock-footer{
+
+    margin-top:8px;
+
+    font-size:13px;
+
+    color:#999;
+
+}
